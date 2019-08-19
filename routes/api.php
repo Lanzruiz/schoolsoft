@@ -14,11 +14,9 @@ use App\Student;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+    //return $request->user();
+//});
 
 
-Route::post('register', function(Request $request) {
-    return Student::create($request->all);
-});
+Route::post('register', 'StudentController@store');
